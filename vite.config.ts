@@ -7,6 +7,5 @@ export default defineConfig({
     react({
       jsxRuntime: 'automatic',
     }),
-    tailwindcss()],
-    base: '/payara',
+    tailwindcss()]
 })

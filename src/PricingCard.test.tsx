@@ -27,4 +27,23 @@ describe("PricingCard Component", () => {
     expect(buttons.length).toBe(3);
     buttons.forEach(button => expect(button).toBeInTheDocument());
   });
+
+  it("displays the correct pricing for each plan", () => {
+    render(<PricingCard />);
+    const prices = ["$0", "$25", "$100"];
+    prices.forEach(price => {
+      expect(screen.getByText(price)).toBeInTheDocument();
+    });
+  });
+
+  // switches to dark more on button click
+  it("switches to dark mode on button click", () => {
+    render(<PricingCard />);
+    const button = screen.getByRole("button", { name: /dark mode/i });
+    fireEvent.click(button);
+    const cardElement = document.getElementsByClassName("card")[0];
+    expect(cardElement.classList.contains("bg-[#1E293B]")).toBe(true);
+    fireEvent.click(button);
+    expect(cardElement.classList.contains("bg-gray-100")).toBe(true);
+  })
 });

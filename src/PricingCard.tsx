@@ -63,7 +63,7 @@ const PricingCard = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={`${darkMode ? "bg-[#1E293B] text-white" : "bg-gray-100 text-gray-900"} flex flex-col items-center justify-center py-12 transition-all`}>
+    <div className={`card ${darkMode ? "bg-[#1E293B] text-white" : "bg-gray-100 text-gray-900"} flex flex-col items-center justify-center py-12 transition-all`}>
       <button 
         className="absolute top-4 right-4 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700"
         onClick={() => setDarkMode(!darkMode)}
@@ -78,7 +78,7 @@ const PricingCard = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`px-8 py-12 rounded-2xl transition-all w-xs md:w-xs lg:w-xs xl:w-sm
+            className={`plan px-8 py-12 rounded-2xl transition-all w-xs md:w-xs lg:w-xs xl:w-sm
               ${plan.highlight ? `lg:px-4 lg:pt-13 bg-[#6D28D9] text-white lg:scale-105 ${darkMode ? "lg:shadow-[0px_4px_44px_0px_#020617]" : "lg:shadow-[0px_4px_44px_0px_#A78BFA]"}` : `${darkMode ? "bg-[#334155] text-white" : "bg-[#EDE9FE] text-gray-900"}`}`}
 
           >

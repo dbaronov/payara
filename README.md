@@ -2,8 +2,9 @@
 
 to make this run on your machine
 
-- clone the repo at https://github.com/dbaronov/payara.git
+- in a folder you like run "git clone https://github.com/dbaronov/payara.git" 
 - cd to proget root folder e.g. "cd payara"
-- run "npm install" to install dependenciesd
+- make sure to have note at >= v22.12.0
+- run "npm install" to get all dependencies needed
 - run "npm run dev" to spin up development environment
 - run "npm run test" to exectute tests

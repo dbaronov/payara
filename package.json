@@ -13,6 +13,13 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "resolutions": {
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0"
+  },
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
   "dependencies": {
     "@jest/globals": "^29.7.0",
     "@jest/types": "^29.6.3",

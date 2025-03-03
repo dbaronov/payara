@@ -1,6 +1,16 @@
 import {useState} from "react";
 
-const plans = [
+interface Plan {
+  name: string;
+  price: string;
+  description: string;
+  features: string[];
+  missingFeatures: string[];
+  buttonText: string;
+  highlight: boolean;
+}
+
+const plans: Plan[] = [
   {
     name: "Freebie",
     price: "$0",
@@ -59,7 +69,7 @@ const plans = [
   },
 ];
 
-const PricingCard = () => {
+const PricingCard: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (

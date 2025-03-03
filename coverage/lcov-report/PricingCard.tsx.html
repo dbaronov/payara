@@ -1,0 +1,574 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for PricingCard.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> PricingCard.tsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">39.26% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>64/163</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">39.26% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>64/163</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState } from "react";
+&nbsp;
+const plans = [
+  {
+    name: "Freebie",
+    price: "$0",
+    description: "Ideal for individuals who need quick access to basic features.",
+    features: [
+      "20,000+ of PNG &amp; SVG graphics",
+      "Access to 100 million stock images",
+    ],
+    missingFeatures: [
+      "Upload custom icons and fonts",
+      "Unlimited Sharing",
+      "Upload graphics &amp; video in up to 4k",
+      "Unlimited Projects",
+      "Instant Access to our design system",
+      "Create teams to collaborate on designs",
+    ],
+    buttonText: "Get Started Now",
+    highlight: false,
+  },
+  {
+    name: "Professional",
+    price: "$25",
+    description: "Ideal for individuals who need advanced features and tools for client work.",
+    features: [
+      "20,000+ of PNG &amp; SVG graphics",
+      "Access to 100 million stock images",
+      "Upload custom icons and fonts",
+      "Unlimited Sharing",
+      "Upload graphics &amp; video in up to 4k",
+      "Unlimited Projects",
+    ],
+    missingFeatures: [
+      "Instant Access to our design system",
+      "Create teams to collaborate on designs",
+    ],
+    buttonText: "Get Started Now",
+    highlight: true,
+  },
+  {
+    name: "Enterprise",
+    price: "$100",
+    description: "Ideal for businesses who need personalized services and security for large teams.",
+    features: [
+      "20,000+ of PNG &amp; SVG graphics",
+      "Access to 100 million stock images",
+      "Upload custom icons and fonts",
+      "Unlimited Sharing",
+      "Upload graphics &amp; video in up to 4k",
+      "Unlimited Projects",
+      "Instant Access to our design system",
+      "Create teams to collaborate on designs",
+    ],
+    missingFeatures: [],
+    buttonText: "Get Started Now",
+    highlight: false,
+  },
+];
+&nbsp;
+const PricingCard = <span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >  const [darkMode, setDarkMode] = useState(false);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
+<span class="cstat-no" title="statement not covered" >    &lt;div className={`${darkMode ? "bg-[#1E293B] text-white" : "bg-gray-100 text-gray-900"} flex flex-col items-center justify-center py-12 transition-all`}&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;button </span>
+<span class="cstat-no" title="statement not covered" >        className="absolute top-4 right-4 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700"</span>
+<span class="cstat-no" title="statement not covered" >        onClick={() =&gt; setDarkMode(!darkMode)}</span>
+<span class="cstat-no" title="statement not covered" >      &gt;</span>
+<span class="cstat-no" title="statement not covered" >        {darkMode ? "Light Mode" : "Dark Mode"}</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;h2 className="text-5xl font-bold text-center mb-4 px-4"&gt;</span>
+<span class="cstat-no" title="statement not covered" >        Powerful features for &lt;span className="text-[#7C3AED]"&gt;powerful creators&lt;/span&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/h2&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;p className={`text-center text-[16px] mb-24 ${darkMode ? "text-gray-400" : "text-gray-600"}`}&gt;Choose a plan that’s right for you&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;div className="flex flex-wrap justify-center gap-8 lg:gap-0"&gt;</span>
+<span class="cstat-no" title="statement not covered" >        {plans.map((plan, index) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >          &lt;div</span>
+<span class="cstat-no" title="statement not covered" >            key={index}</span>
+<span class="cstat-no" title="statement not covered" >            className={`px-8 py-12 rounded-2xl transition-all w-xs md:w-xs lg:w-xs xl:w-sm</span>
+<span class="cstat-no" title="statement not covered" >              ${plan.highlight ? `lg:px-4 lg:pt-13 bg-[#6D28D9] text-white lg:scale-105 ${darkMode ? "lg:shadow-[0px_4px_44px_0px_#020617]" : "lg:shadow-[0px_4px_44px_0px_#A78BFA]"}` : `${darkMode ? "bg-[#334155] text-white" : "bg-[#EDE9FE] text-gray-900"}`}`}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >          &gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;h3 className="text-4xl font-medium"&gt;{plan.name}&lt;/h3&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;p className={`text-base my-4 ${plan.highlight ? "text-gray-200" : darkMode ? "text-white" : "text-gray-600"}`}&gt;{plan.description}&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;p className="text-5xl font-bold my-8 flex items-center"&gt;{plan.price} &lt;span className="text-base font-normal mx-1"&gt;/ Month&lt;/span&gt;&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            &lt;button className={`w-full py-2 rounded-lg font-base mb-4 ${darkMode ? "border-[#C4B5FD] hover:bg-[#475069]" : "border-[#7C3AED]"} border-1 text-[#6D28D9] </span>
+<span class="cstat-no" title="statement not covered" >              ${plan.highlight ? `${darkMode ? "bg-[#F5F3FF] text-[#6D28D9] hover:bg-[#DEDCE8]" : "bg-[#F97316] hover:bg-[#E36A14] text-[#F5F3FF]"} border-none` : `${darkMode ? "text-[#C4B5FD] hover:bg-grey-600" : "hover:bg-purple-200"}`}`}</span>
+<span class="cstat-no" title="statement not covered" >            &gt;</span>
+<span class="cstat-no" title="statement not covered" >              {plan.buttonText}</span>
+<span class="cstat-no" title="statement not covered" >            &lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >            </span>
+<span class="cstat-no" title="statement not covered" >            &lt;ul className="text-left mt-4"&gt;</span>
+<span class="cstat-no" title="statement not covered" >              {plan.features.map((feature, i) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;li key={i} className="flex items-center gap-2 text-base my-3"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;span className="w-[33px] h-[32px]"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    { plan.highlight</span>
+<span class="cstat-no" title="statement not covered" >                      ?</span>
+<span class="cstat-no" title="statement not covered" >                        darkMode</span>
+<span class="cstat-no" title="statement not covered" >                          ?</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M16.665 32C25.5016 32 32.665 24.8366 32.665 16C32.665 7.16344 25.5016 0 16.665 0C7.82848 0 0.665039 7.16344 0.665039 16C0.665039 24.8366 7.82848 32 16.665 32ZM22.458 13.1495C22.7247 12.8957 22.7351 12.4737 22.4813 12.207C22.2274 11.9403 21.8054 11.9299 21.5387 12.1838L14.3385 19.0379L11.8333 16.1763C11.5908 15.8992 11.1696 15.8713 10.8926 16.1138C10.6156 16.3563 10.5876 16.7775 10.8301 17.0545L13.7931 20.4391C13.9127 20.5758 14.0829 20.6577 14.2644 20.666C14.4458 20.6742 14.6228 20.6081 14.7543 20.4829L22.458 13.1495Z" fill="#DDD6FE"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                          :</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M16.665 32C25.5016 32 32.665 24.8366 32.665 16C32.665 7.16344 25.5016 0 16.665 0C7.82848 0 0.665039 7.16344 0.665039 16C0.665039 24.8366 7.82848 32 16.665 32ZM22.458 13.1495C22.7247 12.8957 22.7351 12.4737 22.4813 12.207C22.2274 11.9403 21.8054 11.9299 21.5387 12.1838L14.3385 19.0379L11.8333 16.1763C11.5908 15.8992 11.1696 15.8713 10.8926 16.1138C10.6156 16.3563 10.5876 16.7775 10.8301 17.0545L13.7931 20.4391C13.9127 20.5758 14.0829 20.6577 14.2644 20.666C14.4458 20.6742 14.6228 20.6081 14.7543 20.4829L22.458 13.1495Z" fill="#F5F3FF"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" >                      :</span>
+<span class="cstat-no" title="statement not covered" >                        darkMode</span>
+<span class="cstat-no" title="statement not covered" >                          ?</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M15.9983 32C24.8348 32 31.9983 24.8366 31.9983 16C31.9983 7.16344 24.8348 0 15.9983 0C7.16174 0 -0.00170898 7.16344 -0.00170898 16C-0.00170898 24.8366 7.16174 32 15.9983 32ZM21.7913 13.1495C22.058 12.8957 22.0684 12.4737 21.8145 12.207C21.5606 11.9403 21.1387 11.9299 20.872 12.1838L13.6717 19.0379L11.1666 16.1763C10.9241 15.8992 10.5029 15.8713 10.2258 16.1138C9.94881 16.3563 9.92083 16.7775 10.1634 17.0545L13.1263 20.4391C13.246 20.5758 13.4162 20.6577 13.5976 20.666C13.7791 20.6742 13.956 20.6081 14.0876 20.4829L21.7913 13.1495Z" fill="#C4B5FD"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" >                          :</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M15.9983 32C24.8348 32 31.9983 24.8366 31.9983 16C31.9983 7.16344 24.8348 0 15.9983 0C7.16174 0 -0.00170898 7.16344 -0.00170898 16C-0.00170898 24.8366 7.16174 32 15.9983 32ZM21.7913 13.1495C22.058 12.8957 22.0684 12.4737 21.8145 12.207C21.5606 11.9403 21.1387 11.9299 20.872 12.1838L13.6717 19.0379L11.1666 16.1763C10.9241 15.8992 10.5029 15.8713 10.2258 16.1138C9.94881 16.3563 9.92083 16.7775 10.1634 17.0545L13.1263 20.4391C13.246 20.5758 13.4162 20.6577 13.5976 20.666C13.7791 20.6742 13.956 20.6081 14.0876 20.4829L21.7913 13.1495Z" fill="#8B5CF6"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;/span&gt;</span>
+<span class="cstat-no" title="statement not covered" >                   {feature}</span>
+<span class="cstat-no" title="statement not covered" >                &lt;/li&gt;</span>
+<span class="cstat-no" title="statement not covered" >              ))}</span>
+<span class="cstat-no" title="statement not covered" >              {plan.missingFeatures.map((feature, i) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;li key={i} className={`flex items-center gap-2 ${darkMode ? "text-[#94A3B8]" : "text-[#A78BFA]"} text-base my-3`}&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;span className="w-[33px] h-[32px]"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    { plan.highlight</span>
+<span class="cstat-no" title="statement not covered" >                      ?</span>
+<span class="cstat-no" title="statement not covered" >                        darkMode</span>
+<span class="cstat-no" title="statement not covered" >                          ?</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M16.665 32C25.5016 32 32.665 24.8366 32.665 16C32.665 7.16344 25.5016 0 16.665 0C7.82848 0 0.665039 7.16344 0.665039 16C0.665039 24.8366 7.82848 32 16.665 32ZM20.9056 19.2978C21.166 19.5581 21.166 19.9803 20.9056 20.2406C20.6453 20.501 20.2232 20.501 19.9628 20.2406L16.6635 16.9412L13.3641 20.2406C13.1037 20.501 12.6816 20.501 12.4213 20.2406C12.1609 19.9803 12.1609 19.5581 12.4213 19.2978L15.7206 15.9984L12.4204 12.6981C12.16 12.4378 12.16 12.0157 12.4204 11.7553C12.6807 11.495 13.1028 11.495 13.3632 11.7553L16.6635 15.0556L19.9637 11.7553C20.2241 11.495 20.6462 11.495 20.9065 11.7553C21.1669 12.0157 21.1669 12.4378 20.9065 12.6981L17.6063 15.9984L20.9056 19.2978Z" fill="#8B5CF6"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" >                          :</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M16.665 32C25.5016 32 32.665 24.8366 32.665 16C32.665 7.16344 25.5016 0 16.665 0C7.82848 0 0.665039 7.16344 0.665039 16C0.665039 24.8366 7.82848 32 16.665 32ZM20.9056 19.2978C21.166 19.5581 21.166 19.9803 20.9056 20.2406C20.6453 20.501 20.2232 20.501 19.9628 20.2406L16.6635 16.9412L13.3641 20.2406C13.1037 20.501 12.6816 20.501 12.4213 20.2406C12.1609 19.9803 12.1609 19.5581 12.4213 19.2978L15.7206 15.9984L12.4204 12.6981C12.16 12.4378 12.16 12.0157 12.4204 11.7553C12.6807 11.495 13.1028 11.495 13.3632 11.7553L16.6635 15.0556L19.9637 11.7553C20.2241 11.495 20.6462 11.495 20.9065 11.7553C21.1669 12.0157 21.1669 12.4378 20.9065 12.6981L17.6063 15.9984L20.9056 19.2978Z" fill="#8B5CF6"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" >                      :</span>
+<span class="cstat-no" title="statement not covered" >                        darkMode</span>
+<span class="cstat-no" title="statement not covered" >                          ?</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M15.9983 32C24.8348 32 31.9983 24.8366 31.9983 16C31.9983 7.16344 24.8348 0 15.9983 0C7.16174 0 -0.00170898 7.16344 -0.00170898 16C-0.00170898 24.8366 7.16174 32 15.9983 32ZM20.2389 19.2978C20.4992 19.5581 20.4992 19.9803 20.2389 20.2406C19.9785 20.501 19.5564 20.501 19.2961 20.2406L15.9967 16.9412L12.6973 20.2406C12.437 20.501 12.0149 20.501 11.7545 20.2406C11.4942 19.9803 11.4942 19.5581 11.7545 19.2978L15.0539 15.9984L11.7536 12.6981C11.4933 12.4378 11.4933 12.0157 11.7536 11.7553C12.014 11.495 12.4361 11.495 12.6964 11.7553L15.9967 15.0556L19.297 11.7553C19.5573 11.495 19.9795 11.495 20.2398 11.7553C20.5001 12.0157 20.5001 12.4378 20.2398 12.6981L16.9395 15.9984L20.2389 19.2978Z" fill="#64748B"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" >                          :</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                              &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M15.9983 32C24.8348 32 31.9983 24.8366 31.9983 16C31.9983 7.16344 24.8348 0 15.9983 0C7.16174 0 -0.00170898 7.16344 -0.00170898 16C-0.00170898 24.8366 7.16174 32 15.9983 32ZM20.2389 19.2978C20.4992 19.5581 20.4992 19.9803 20.2389 20.2406C19.9785 20.501 19.5564 20.501 19.2961 20.2406L15.9967 16.9412L12.6973 20.2406C12.437 20.501 12.0149 20.501 11.7545 20.2406C11.4942 19.9803 11.4942 19.5581 11.7545 19.2978L15.0539 15.9984L11.7536 12.6981C11.4933 12.4378 11.4933 12.0157 11.7536 11.7553C12.014 11.495 12.4361 11.495 12.6964 11.7553L15.9967 15.0556L19.297 11.7553C19.5573 11.495 19.9795 11.495 20.2398 11.7553C20.5001 12.0157 20.5001 12.4378 20.2398 12.6981L16.9395 15.9984L20.2389 19.2978Z" fill="#C4B5FD"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;/svg&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;/span&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  {feature}</span>
+<span class="cstat-no" title="statement not covered" >                &lt;/li&gt;</span>
+<span class="cstat-no" title="statement not covered" >              ))}</span>
+<span class="cstat-no" title="statement not covered" >            &lt;/ul&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >        ))}</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >  );</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+export default PricingCard;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-03-03T15:34:42.593Z
+            </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    
